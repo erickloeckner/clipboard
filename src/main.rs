@@ -28,6 +28,7 @@ const STYLE: &str = "
     padding-right:  4px;
     padding-top:    2px;
     padding-bottom: 2px;
+    transition-property: none;
 }
 #buttons:hover {
     background-image: -gtk-gradient (linear,
@@ -39,6 +40,7 @@ const STYLE: &str = "
     padding-right:  4px;
     padding-top:    2px;
     padding-bottom: 2px;
+    transition-property: none;
 }
 #buttons label {
     color: #f2f0f0;
@@ -90,6 +92,7 @@ fn build_ui(application: &gtk::Application) {
     //~ window.set_border_width(10);
     window.set_position(gtk::WindowPosition::Center);
     //~ window.set_default_size(360, 240);
+    window.set_keep_above(true);
     
     let hbox = gtk::Box::new(gtk::Orientation::Horizontal, 0);
 
